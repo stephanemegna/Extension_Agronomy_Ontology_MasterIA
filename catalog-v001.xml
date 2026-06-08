@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice" uri="Practice.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate" uri="climate.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop" uri="crop.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil" uri="Soil.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1779983298221" name="http://purl.obolibrary.org/obo/agro-edit.owl" uri="agro.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1779983298221" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil/" uri="Soil.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1779983298221" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate/" uri="climate.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1779983298221" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop/" uri="crop.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1779983298221" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice/" uri="Practice.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1779983298221" name="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation/" uri="Situation.rdf"/>
+    </group>
+</catalog>

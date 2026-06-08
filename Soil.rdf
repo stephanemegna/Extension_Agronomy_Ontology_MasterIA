@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil/"
+     xml:base="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#concernsNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#concernsNutrient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasAvailableNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasAvailableNutrient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPhosphorusLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPhosphorusLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPotassiumLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPotassiumLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasSoilFertilityStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasSoilFertilityStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:ObjectProperty>
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasSoilStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasSoilStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasCEC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasCEC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasOrganicMatter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasOrganicMatter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasSoilPH -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasSoilPH">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#CEC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#CEC"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighNitrogen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighNitrogen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPhosphorus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPhosphorus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPotassium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPotassium"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPhosphorus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPhosphorus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPotassium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPotassium"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNitrogen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNitrogen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPhosphorus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPhosphorus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPotassium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPotassium"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#OrganicMatter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#OrganicMatter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorNitrogenSoil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorNitrogenSoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorPhosphorusSoil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorPhosphorusSoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorPotassiumSoil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorPotassiumSoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichNitrogenSoil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichNitrogenSoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPhosphorus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPhosphorus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPotassium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPotassium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilStatus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNutrients -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNutrients">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNutrients -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNutrients">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighNutrients -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighNutrients">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilPH -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilPH"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilTexture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilTexture"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen"/>
+    </owl:NamedIndividual>
+
+
+
+
+
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->

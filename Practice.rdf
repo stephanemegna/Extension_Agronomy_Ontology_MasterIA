@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice/"
+     xml:base="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasPractice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasPractice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PracticeRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasApplicationRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasApplicationRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasFrequency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasMaxDose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasMaxDose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasMethod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasMinDose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasMinDose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasRecommendedDose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasRecommendedDose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#CropManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#CropManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Drainage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Drainage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#DrainageRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#DrainageRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PracticeRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#DripIrrigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#DripIrrigation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Irrigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Fertilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Fertilization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#FertilizationRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#FertilizationRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PracticeRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#FungicideTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#FungicideTreatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Irrigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Irrigation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#IrrigationRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#IrrigationRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PracticeRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Liming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Liming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#SoilAmendment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Fertilization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#OrganicFertilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#OrganicFertilization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Fertilization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#OrganicMatterAddition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#OrganicMatterAddition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#SoilAmendment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PestControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PestControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PhosphorusFertilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PhosphorusFertilization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Fertilization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PotassiumFertilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PotassiumFertilization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Fertilization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PracticeRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PracticeRequirement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#hasPractice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#SoilAmendment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#SoilAmendment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#SprinklerIrrigation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#SprinklerIrrigation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Irrigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#TreatmentRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#TreatmentRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#PracticeRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#VarietySelection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#VarietySelection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#AgriculturalPractice"/>
+        <rdfs:comment>Pratique agricole de sélection de variété adaptée aux conditions locales de sol, climat et besoins de culture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,682 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop/"
+     xml:base="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:crop="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#adaptedToClimate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#adaptedToClimate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#adaptedToSoil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#adaptedToSoil">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#appliesAtGrowthStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#appliesAtGrowthStage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#concernsNutrient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#concernsNutrient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Nutrient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#dependsOnClimate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#dependsOnClimate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#dependsOnSoil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#dependsOnSoil">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#follows -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#follows">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasGrowthStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasGrowthStage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasNutrientRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasNutrientRequirement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasTemperatureRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasTemperatureRequirement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#TemperatureRequirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasVariety -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasVariety">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isRequiredAtStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isRequiredAtStage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Nutrient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#precedes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasCycleDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasCycleDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasCycleDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMaxRequirement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMaxRequirement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMaxTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMaxTemp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#TemperatureRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMinRequirement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMinRequirement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMinTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMinTemp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#TemperatureRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasOptimalMaxTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasOptimalMaxTemp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#TemperatureRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasOptimalMinTemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasOptimalMinTemp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#TemperatureRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasOriginRegion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasOriginRegion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasRequiredAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasRequiredAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasResistanceLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasResistanceLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasSeedRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasSeedRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasStageSpecificAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasStageSpecificAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasYield -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasYield">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isImprovedVariety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isImprovedVariety">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#resistantTo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#resistantTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cacao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cacao_Variety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cacao_Variety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava_Variety"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize_Variety"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain_Variety"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava_Variety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava_Variety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize_Variety"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain_Variety"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasVariety"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#FloweringStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#FloweringStage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#follows"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#precedes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize_Variety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize_Variety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain_Variety"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Micronutrient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Micronutrient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NitrogenLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NitrogenLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Nutrient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Nutrient">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isRequiredAtStage"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#appliesAtGrowthStage"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#concernsNutrient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Nutrient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasGrowthStage"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMaxRequirement"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasMinRequirement"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasRequiredAmount"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasStageSpecificAmount"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#PhosphorusLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#PhosphorusLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain_Variety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain_Variety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#PotassiumLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#PotassiumLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#TemperatureRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#TemperatureRequirement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Variety">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasNutrientRequirement"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#NutrientRequirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isVarietyOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Crop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasCycleDuration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasOriginRegion"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasResistanceLevel"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasSeedRate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#hasYield"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#isImprovedVariety"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#resistantTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#VegetativeStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#VegetativeStage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#GrowthStage"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

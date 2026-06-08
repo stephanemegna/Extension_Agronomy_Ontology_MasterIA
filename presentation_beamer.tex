@@ -1,0 +1,283 @@
+\documentclass{beamer}
+% Thème moderne et sobre
+\usetheme[progressbar=frametitle]{metropolis}
+\usecolortheme{spruce}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% Pour encadrés visuels
+\setbeamercolor{block title alerted}{fg=white,bg=orange!85!black}
+\setbeamercolor{block body alerted}{fg=black,bg=orange!10!white}
+\setbeamercolor{block title example}{fg=white,bg=teal!80!black}
+\setbeamercolor{block body example}{fg=black,bg=teal!10!white}
+
+\title[Conception d'une Ontologie et Moteur d'Inférence]{Présentation du Travail de Conception :\newline Modules et Moteur d'Inférence}
+\author{Votre Nom}
+\institute{Votre Institution}
+\date{26 Mai 2026}
+
+\begin{document}
+
+% Slide d'ouverture visuelle
+\begin{frame}[plain]
+  \vfill
+  \centering
+  {\LARGE\textbf{« L’agriculture de demain se construit aujourd’hui par la connaissance et l’interopérabilité. »}}
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Sommaire
+\begin{frame}{Plan}
+  \tableofcontents
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[width=0.25\linewidth]{architecture.png}
+  \end{center}
+  \pause
+  \alert{\small{Chaque module et scénario sera illustré en détail.}}
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Pourquoi une ontologie agricole ?}
+  \begin{block}{Enjeux}
+    \begin{itemize}
+      \item Complexité croissante des systèmes agricoles
+      \item Besoin d’interopérabilité et de partage des connaissances
+      \item Valorisation des données pour l’innovation
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{Contexte et Objectifs}
+  \begin{itemize}
+    \item Besoin de modélisation des connaissances dans le domaine agricole
+    \item Objectif : Concevoir une ontologie robuste et un moteur d'inférence performant
+    \item Valorisation des données pour l'aide à la décision
+  \end{itemize}
+\end{frame}
+
+\section{Méthodologie de Conception}
+\begin{frame}{Méthodes de Conception}
+  \begin{enumerate}
+    \item Analyse documentaire et entretiens avec des experts
+    \item Construction itérative de l’ontologie
+    \item Validation croisée des modules et des scénarios
+    \item Tests d’interopérabilité et d’intégration
+  \end{enumerate}
+  \pause
+  \begin{alertblock}{Clé de réussite}
+    L’implication continue des experts métiers.
+  \end{alertblock}
+\end{frame}
+\begin{frame}{Démarche de Conception}
+  \begin{enumerate}
+    \item Analyse des besoins et collecte des exigences
+    \item Modélisation des concepts clés (climat, sol, culture, pratiques)
+    \item Définition des relations et propriétés
+    \item Validation par des experts du domaine
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Outils et Technologies}
+  \begin{itemize}
+    \item OWL, RDF, Protégé
+    \item Raisonneurs : Pellet, Hermit
+    \item Intégration avec des modules Python/Java pour l'inférence
+  \end{itemize}
+\end{frame}
+
+\section{Architecture des Modules}
+
+\begin{frame}{Schéma conceptuel de l’architecture}
+  \centering
+  \begin{tikzpicture}[node distance=2cm, every node/.style={draw, fill=teal!10, rounded corners, minimum width=2.5cm, minimum height=1cm, align=center}]
+    \node (climat) {Climat};
+    \node (sol) [right=of climat] {Sol};
+    \node (culture) [below=of climat] {Culture};
+    \node (pratique) [right=of culture] {Pratique};
+    \node (situation) [below=1.5cm of culture, fill=orange!20] {\textbf{Situation (Interopérabilité)}};
+    \draw[->, thick] (climat) -- (situation);
+    \draw[->, thick] (sol) -- (situation);
+    \draw[->, thick] (culture) -- (situation);
+    \draw[->, thick] (pratique) -- (situation);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Vue d'Ensemble des Modules}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{architecture.png}
+    \caption{Architecture modulaire du système}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Module Climat}
+  \begin{itemize}
+    \item Gestion des données météorologiques (température, précipitations, humidité)
+    \item Intégration de sources climatiques variées
+    \item Impact sur les recommandations agronomiques
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module Sol}
+  \begin{itemize}
+    \item Caractérisation des types de sols (texture, pH, fertilité)
+    \item Prise en compte des propriétés physiques et chimiques
+    \item Influence sur le choix des cultures et pratiques
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module Culture (Crop)}
+  \begin{itemize}
+    \item Modélisation des espèces cultivées
+    \item Cycle de vie, besoins spécifiques
+    \item Adaptation aux conditions locales
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module Pratique}
+  \begin{itemize}
+    \item Représentation des pratiques agricoles (rotation, fertilisation, irrigation)
+    \item Effets sur la durabilité et la productivité
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module d'Interopérabilité : Situation (situation.rdf)}
+  \begin{itemize}
+    \item Centralise l'information sur les situations agronomiques
+    \item Permet l'interconnexion entre les modules (sol, climat, culture, pratique)
+    \item Facilite l'intégration de nouveaux scénarios et l'interopérabilité des données
+    \item Base pour l'inférence et la personnalisation des recommandations
+  \end{itemize}
+  \pause
+  \begin{exampleblock}{Focus}
+    Le module \textbf{Situation} est le cœur de l’architecture : il permet de croiser toutes les dimensions pour générer des recommandations adaptées à chaque contexte agronomique.
+  \end{exampleblock}
+\end{frame}
+
+
+% Présentation détaillée des scénarios de situations agronomiques
+\section{Scénarios de Situations Agronomiques}
+
+\begin{frame}{Résumé graphique des scénarios}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{\#} & \textbf{Sol} & \textbf{Climat} & \textbf{Culture} & \textbf{Pratique} \\
+    \hline
+    1 & Argileux & Humide & Riz & Rotation annuelle \\
+    2 & Sableux & Sec & Mil & Irrigation min. \\
+    3 & Limoneux & Tempéré & Blé & Fertilisation org. \\
+    4 & Acide & Tropical & Manioc & Jachère \\
+    5 & Calcaire & Méditerranéen & Vigne & Taille hivernale \\
+    \hline
+    ... & ... & ... & ... & ... \\
+    \hline
+  \end{tabular}
+  \vspace{0.3cm}
+  \alert{\small{Tous les scénarios sont modélisés dans situation.rdf}}
+\end{frame}
+
+\begin{frame}{Méthodes de Conception}
+  \begin{enumerate}
+    \item Analyse documentaire et entretiens avec des experts
+    \item Construction itérative de l'ontologie
+    \item Validation croisée des modules et des scénarios
+    \item Tests d'interopérabilité et d'intégration
+  \end{enumerate}
+  \pause
+  \begin{block}{Points forts}
+    \begin{itemize}
+      \item Approche collaborative et évolutive
+      \item Validation continue par des cas réels
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Moteur d'Inférence}
+\begin{frame}{Fonctionnement du Moteur d'Inférence}
+  \begin{itemize}
+    \item Règles basées sur l'ontologie
+    \item Raisonnement automatique pour l'aide à la décision
+    \item Exemples de règles :
+    \begin{itemize}
+      \item Si le sol est argileux et le climat humide, alors recommander la culture du riz
+      \item Si la pratique est la rotation, alors améliorer la fertilité du sol
+    \end{itemize}
+  \end{itemize}
+  \pause
+  \begin{alertblock}{Atout}
+    Le moteur d’inférence permet d’automatiser la personnalisation des recommandations pour chaque situation.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Exemple de Chaîne d'Inférence}
+  \begin{block}{Cas d'utilisation}
+    \begin{itemize}
+      \item Entrée : Données sur le sol, le climat et la culture
+      \item Traitement : Application des règles d'inférence
+      \item Sortie : Recommandations personnalisées
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{exampleblock}{Visualisation}
+    \centering
+    %\includegraphics[width=0.5\linewidth]{inference_chain.png}
+    %\newline
+    \small{Chaîne d’inférence illustrant le passage des données à la recommandation. (Image à insérer ici)}
+  \end{exampleblock}
+\end{frame}
+
+\section{Résultats et Validation}
+
+\begin{frame}{Résultats Obtenus}
+  \begin{block}{Validation}
+    \begin{itemize}
+      \item Ontologie validée par des experts du domaine
+      \item Interopérabilité assurée entre les modules via situation.rdf
+      \item Génération automatique de recommandations adaptées à chaque scénario
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{alertblock}{Impact}
+    \begin{itemize}
+      \item Amélioration de la prise de décision agronomique
+      \item Facilité d’extension et d’intégration de nouveaux modules/scénarios
+      \item Base solide pour des applications d’aide à la décision
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Bilan et Perspectives}
+  \begin{block}{Bilan}
+    \begin{itemize}
+      \item Ontologie modulaire et évolutive
+      \item Moteur d’inférence adaptable
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{exampleblock}{Perspectives}
+    \begin{itemize}
+      \item Extension à d’autres domaines agricoles
+      \item Intégration de données massives (big data, IoT)
+      \item Déploiement sur plateformes d’aide à la décision
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Questions ?}
+  \centering
+  \Huge{Merci pour votre attention !}
+\end{frame}
+
+\end{document}

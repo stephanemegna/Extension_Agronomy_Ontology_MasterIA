@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate/"
+     xml:base="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate/1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasCloudCover -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasCloudCover">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#CloudCover"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasHumidity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasHumidity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Humidity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPrecipitation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPrecipitation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPressure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPressure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Pressure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasTemperature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temperature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasWind -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasWind">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind"/>
+    </owl:ObjectProperty>
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasCloudiness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasCloudiness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#CloudCover"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasDirection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasDirection">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasSpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateZone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateZone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#GoodClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#GoodClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#BadClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#BadClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ColdClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ColdClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HotClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HotClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#DryClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#DryClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WetClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WetClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#CloudCover -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#CloudCover">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#CloudCoverLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#CloudCoverLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighHumidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighHumidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighPrecipitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighPrecipitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#PrecipitationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighRainfall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighRainfall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#RainfallLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#TemperatureLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighWind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighWind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Humidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Humidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidityLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidityLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowHumidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowHumidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowPrecipitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowPrecipitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#PrecipitationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowRainfall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowRainfall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#RainfallLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#TemperatureLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowWind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowWind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateWind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateWind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateRainfall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateRainfall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#RainfallLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalHumidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalHumidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidityLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalPrecipitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalPrecipitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#PrecipitationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#TemperatureLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalWind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#OptimalWind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#PrecipitationLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#PrecipitationLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Pressure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Pressure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#PressureLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#PressureLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Rainfall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Rainfall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#RainfallLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#RainfallLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#SolarRadiation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#SolarRadiation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#TemperatureLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#TemperatureLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+</rdf:RDF>
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
