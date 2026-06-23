@@ -5,7 +5,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:climate="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate">
         <owl:versionIRI rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate/1.0"/>
     </owl:Ontology>
@@ -20,6 +24,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -40,6 +50,15 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
     </owl:ObjectProperty>
     
 
@@ -100,14 +119,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateParameter"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind"/>
-    </owl:ObjectProperty>
-
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateStatus -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasClimateStatus">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
     </owl:ObjectProperty>
     
 
@@ -179,6 +190,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#BadClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#BadClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
@@ -197,74 +216,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateZone -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateZone"/>
-    
-
-
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
     
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#GoodClimate -->
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateZone -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#GoodClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateClimate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#BadClimate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#BadClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
-    
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ColdClimate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ColdClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
-    
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HotClimate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HotClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
-    
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidClimate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
-    
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#DryClimate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#DryClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
-    
-
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WetClimate -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WetClimate">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateZone"/>
     
 
 
@@ -280,6 +240,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#CloudCoverLevel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ColdClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ColdClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#DryClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#DryClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#GoodClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#GoodClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
     </owl:Class>
     
 
@@ -311,6 +295,7 @@
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighTemperature -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#TemperatureLevel"/>
     </owl:Class>
     
@@ -320,6 +305,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HighWind">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HotClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HotClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HumidClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
     </owl:Class>
     
 
@@ -367,6 +368,7 @@
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowTemperature -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#TemperatureLevel"/>
     </owl:Class>
     
@@ -380,10 +382,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateWind -->
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#MediumTemperature -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateWind">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#MediumTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
     </owl:Class>
     
 
@@ -392,6 +402,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateRainfall">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#RainfallLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateWind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ModerateWind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel"/>
     </owl:Class>
     
 
@@ -498,6 +516,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WetClimate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WetClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateStatus"/>
+    </owl:Class>
+    
+    <!-- SWRL variables for climate rules -->
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+
+    <!-- Favorable / Unfavorable climate classes -->
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#FavorableClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#GoodClimate"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#UnfavorableClimate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#BadClimate"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Wind">
@@ -511,10 +556,519 @@
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WindLevel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ClimateParameterLevel"/>
     </owl:Class>
-    
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+    </rdf:Description>
 
+    <!-- Climate profile rules (SWRL) -->
+    <!-- Dry climate: precipitation < 300 -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>DryClimateRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPrecipitation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#DryClimate"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Wet climate: precipitation >= 800 -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>WetClimateRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPrecipitation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">800.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#WetClimate"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Hot climate: temperature >= 30 -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>HotClimateRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasTemperature"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#HotClimate"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Cold climate: temperature < 15 -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>ColdClimateRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasTemperature"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#ColdClimate"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Favorable climate: temperature 18-28 AND precipitation 400-800 -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>FavorableClimateRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasTemperature"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">28.0</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#FavorableClimate"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Bad climate: severe drought (precip < 150) -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>BadClimate_Drought</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPrecipitation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#param"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#UnfavorableClimate"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Test instances for climate rules -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <climate:hasPrecipitation rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precip_Dry"/>
+        <rdfs:label>Climate_Dry</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precip_Dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation"/>
+        <climate:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</climate:hasValue>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Wet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <climate:hasPrecipitation rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precip_Wet"/>
+        <rdfs:label>Climate_Wet</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precip_Wet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation"/>
+        <climate:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</climate:hasValue>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Hot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <climate:hasTemperature rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temp_Hot"/>
+        <rdfs:label>Climate_Hot</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temp_Hot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temperature"/>
+        <climate:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35.0</climate:hasValue>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Cold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <climate:hasTemperature rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temp_Cold"/>
+        <rdfs:label>Climate_Cold</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temp_Cold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temperature"/>
+        <climate:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</climate:hasValue>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Favorable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate"/>
+        <climate:hasTemperature rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temp_Fav"/>
+        <climate:hasPrecipitation rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precip_Fav"/>
+        <rdfs:label>Climate_Favorable</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temp_Fav">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Temperature"/>
+        <climate:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</climate:hasValue>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precip_Fav">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation"/>
+        <climate:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">600.0</climate:hasValue>
+    </owl:NamedIndividual>
 
 </rdf:RDF>
+
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->

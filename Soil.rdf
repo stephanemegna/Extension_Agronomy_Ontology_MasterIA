@@ -11,6 +11,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil">
         <owl:versionIRI rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil/1.0"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment"/>
     </owl:Ontology>
     
 
@@ -46,7 +47,7 @@
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#concernsNutrient -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#concernsNutrient">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
     </owl:ObjectProperty>
     
 
@@ -55,7 +56,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasAvailableNutrient">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
     </owl:ObjectProperty>
     
 
@@ -65,7 +66,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
     </owl:ObjectProperty>
     
 
@@ -74,7 +75,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
     </owl:ObjectProperty>
     
 
@@ -84,7 +85,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPhosphorusLevel">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
     </owl:ObjectProperty>
     
 
@@ -94,7 +95,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPotassiumLevel">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNutrientLevel"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
     </owl:ObjectProperty>
     
 
@@ -157,7 +158,7 @@
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasUnit -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasUnit">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -166,7 +167,7 @@
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasValue -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasValue">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#NutrientLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
@@ -189,64 +190,24 @@
     
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighNitrogen -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighNitrogen"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPhosphorus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPhosphorus"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPotassium -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#HighPotassium"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPhosphorus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPhosphorus"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPotassium -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowPotassium"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNitrogen -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNitrogen"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPhosphorus -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPhosphorus"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPotassium -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPotassium"/>
-    
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#NutrientLevel"/>
-    
 
 
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#OrganicMatter -->
@@ -298,6 +259,17 @@
     <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPotassium -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPotassium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+
+    <!-- Medium nutrient soil classes -->
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNitrogenSoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPhosphorusSoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPotassiumSoil">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#SoilFertilityStatus"/>
     </owl:Class>
     
@@ -376,11 +348,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen">
-        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNitrogen"/>
-    </owl:NamedIndividual>
 
 
 
@@ -388,8 +355,936 @@
 
 
 
-</rdf:RDF>
+    <!-- SWRL variables for soil-level rules -->
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+
+    <!-- Soil profile rules (Nitrogen example) -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>PoorNitrogenSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorNitrogenSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Medium Nitrogen soil rule (20 <= v < 50) -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>MediumNitrogenSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumNitrogenSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Rich Nitrogen soil rule (v >= 50) -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>RichNitrogenSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichNitrogenSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
 
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
+    <!-- Phosphorus soil profile rules (low <10, medium 10-20, high >=20) -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>PoorPhosphorusSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPhosphorusLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorPhosphorusSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>MediumPhosphorusSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPhosphorusLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPhosphorusSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>RichPhosphorusSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPhosphorusLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPhosphorus"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Potassium soil profile rules (low <50, medium 50-150, high >=150) -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>PoorPotassiumSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPotassiumLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#PoorPotassiumSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>MediumPotassiumSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPotassiumLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#MediumPotassiumSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>RichPotassiumSoilRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPotassiumLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#RichPotassium"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Aggregate rules: classify soil as LowNutrients if any nutrient value is below threshold -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>LowNutrientsFromNitrogen</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNutrients"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>LowNutrientsFromPhosphorus</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPhosphorusLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNutrients"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>LowNutrientsFromPotassium</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasPotassiumLevel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#lvl"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#LowNutrients"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+</rdf:RDF>
