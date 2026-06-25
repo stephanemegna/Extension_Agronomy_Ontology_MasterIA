@@ -1511,6 +1511,417 @@ affectant le développement de la culture, notamment en période critique.</rdfs
         <rdfs:label>Situation_Plantain_N_Poor</rdfs:label>
     </owl:NamedIndividual>
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // NITROGEN DEFICIENCY DETECTION AND FERTILIZATION RECOMMENDATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <!-- Class for situations with nitrogen deficiency that require fertilization -->
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenDeficiencySituation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenDeficiency"/>
+        <rdfs:comment>Situation agronomique caractérisée par une carence en azote du sol nécessitant une intervention de fertilisation azotée.</rdfs:comment>
+    </owl:Class>
+
+    <!-- Class for nitrogen fertilization recommendations -->
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilizationRecommendation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#RecommendedPractice"/>
+        <rdfs:comment>Recommandation spécifique de fertilisation azotée pour une situation de carence en azote.</rdfs:comment>
+    </owl:Class>
+
+    <!-- Additional SWRL variables for nitrogen deficiency rules -->
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#srcNit">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitNit">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#lvlNit">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#vNit">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+
+    <!-- SWRL Rule: Detect nitrogen deficiency in a situation and recommend nitrogen fertilization -->
+    <!-- Rule: If a situation has a soil with low nitrogen level, classify it as NitrogenDeficiencySituation and recommend NitrogenFertilization -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>DetectNitrogenDeficiencyAndRecommendFertilizationRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#hasSoil"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitNit"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#srcNit"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#hasNitrogenLevel"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#srcNit"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#lvlNit"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#hasValue"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#lvlNit"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#vNit"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#vNit"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenDeficiencySituation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitNit"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#requiresPractice"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitNit"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization_Recommended"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Nitrogen Fertilization Practice instance for recommendations -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization_Recommended">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#NitrogenFertilization"/>
+        <rdfs:label>NitrogenFertilization_Recommended</rdfs:label>
+        <rdfs:comment>Pratique recommandée de fertilisation azotée pour situations de carence en azote.</rdfs:comment>
+        <practice:hasMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Application d'engrais azotés (urée, sulfate d'ammonium, ou engrais composé)</practice:hasMethod>
+        <practice:hasRecommendedDose rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</practice:hasRecommendedDose>
+        <practice:hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg/ha</practice:hasUnit>
+        <practice:hasFrequency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Une application en début de saison ou deux applications fractionnées (50% stade végétatif, 50% montaison)</practice:hasFrequency>
+    </owl:NamedIndividual>
+
+    <!-- Test instance: Agricultural situation with nitrogen deficiency that will trigger the rule -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Test_Maize_NitrogenDeficiency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#AgriculturalSituation"/>
+        <situation:hasSoil rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Soil_Test_NitrogenDepleted"/>
+        <situation:hasCrop rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize_Variety_Standard"/>
+        <situation:hasClimate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Favorable"/>
+        <rdfs:label>Test_Maize_NitrogenDeficiency</rdfs:label>
+        <rdfs:comment>Instance de test pour vérifier que la règle de détection de carence d'azote fonctionne correctement.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Test soil: soil with severe nitrogen deficiency (value &lt; 20) -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Soil_Test_NitrogenDepleted">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <Soil:hasNitrogenLevel rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenLevel_VeryLow"/>
+        <rdfs:label>Soil_Test_NitrogenDepleted</rdfs:label>
+        <rdfs:comment>Sol de test avec niveau d'azote très faible (5 mg/kg) pour tester la détection de carence.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Test nitrogen level: very low nitrogen value -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenLevel_VeryLow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#LowNitrogen"/>
+        <Nutriment:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</Nutriment:hasValue>
+        <Nutriment:hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/kg</Nutriment:hasUnit>
+        <rdfs:label>NitrogenLevel_VeryLow</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- Second test instance: situation with borderline nitrogen deficiency (just below 20) -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Test_Cassava_BorderlineNitrogenDeficiency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#AgriculturalSituation"/>
+        <situation:hasSoil rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Soil_Test_NitrogenBorderline"/>
+        <situation:hasCrop rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Cassava_Variety_Standard"/>
+        <situation:hasClimate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Favorable"/>
+        <rdfs:label>Test_Cassava_BorderlineNitrogenDeficiency</rdfs:label>
+        <rdfs:comment>Instance de test avec une carence d'azote au seuil limite (18.5 mg/kg) pour vérifier les limites de la règle.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Test soil: soil with borderline nitrogen deficiency -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Soil_Test_NitrogenBorderline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <Soil:hasNitrogenLevel rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenLevel_Borderline"/>
+        <rdfs:label>Soil_Test_NitrogenBorderline</rdfs:label>
+        <rdfs:comment>Sol de test avec niveau d'azote au seuil limite (18.5 mg/kg).</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Test nitrogen level: borderline value just below the threshold -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenLevel_Borderline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#LowNitrogen"/>
+        <Nutriment:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.5</Nutriment:hasValue>
+        <Nutriment:hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/kg</Nutriment:hasUnit>
+        <rdfs:label>NitrogenLevel_Borderline</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- Third test instance: situation with adequate nitrogen (should NOT trigger rule) -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Test_Plantain_AdequateNitrogen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#AgriculturalSituation"/>
+        <situation:hasSoil rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Soil_Test_NitrogenAdequate"/>
+        <situation:hasCrop rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Plantain_Variety_Standard"/>
+        <situation:hasClimate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_Favorable"/>
+        <rdfs:label>Test_Plantain_AdequateNitrogen</rdfs:label>
+        <rdfs:comment>Instance de test avec un niveau d'azote adéquat (25 mg/kg) - cette situation NE DOIT PAS être classée comme carence d'azote.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Test soil: soil with adequate nitrogen (should not trigger the rule) -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Soil_Test_NitrogenAdequate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Soil#Soil"/>
+        <Soil:hasNitrogenLevel rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenLevel_Adequate"/>
+        <rdfs:label>Soil_Test_NitrogenAdequate</rdfs:label>
+        <rdfs:comment>Sol de test avec niveau d'azote adéquat (25 mg/kg) - au-dessus du seuil de carence.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Test nitrogen level: adequate value (above threshold) -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#NitrogenLevel_Adequate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/Nutriment#MediumNitrogen"/>
+        <Nutriment:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</Nutriment:hasValue>
+        <Nutriment:hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/kg</Nutriment:hasUnit>
+        <rdfs:label>NitrogenLevel_Adequate</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // COMBINED MAIZE WATER + NITROGEN STRESS RULE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <!-- Class for irrigation need situations specific to maize -->
+    <owl:Class rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#MaizeIrrigationNeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#WaterStressSituation"/>
+        <rdfs:comment>Situation agronomique de maïs nécessitant une irrigation en raison d’un déficit pluviométrique réel interprété par un seuil de précipitation.</rdfs:comment>
+    </owl:Class>
+
+    <!-- Additional SWRL variables for irrigation need rule -->
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitWN">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#climWN">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#precWN">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#vNWN">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#cropWN">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+
+    <!-- SWRL Rule: Maize Irrigation Need Detection -->
+    <!-- Rule: If situation has maize crop AND rainfall amount is below 300 mm, then classify as MaizeIrrigationNeed and recommend irrigation -->
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:label>DetectMaizeIrrigationNeedRule</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#hasCrop"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitWN"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#cropWN"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize_Variety"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#cropWN"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#hasClimate"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitWN"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#climWN"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasPrecipitation"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#climWN"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#precWN"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#hasValue"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#precWN"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#vNWN"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                                <swrl:arguments>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#vNWN"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#MaizeIrrigationNeed"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitWN"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#requiresPractice"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#sitWN"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Irrigation_Recommended"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+
+    <!-- Irrigation Recommended Practice instance -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Irrigation_Recommended">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/practice#Irrigation"/>
+        <rdfs:label>Irrigation_Recommended</rdfs:label>
+        <rdfs:comment>Pratique recommandée d'irrigation pour situations de stress hydrique.</rdfs:comment>
+        <practice:hasMethod rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Irrigation par aspersion ou goutte-à-goutte</practice:hasMethod>
+        <practice:hasFrequency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Une irrigation tous les 5-7 jours pendant périodes sèches ou selon besoins de la culture</practice:hasFrequency>
+        <practice:effectivenessScore rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.85</practice:effectivenessScore>
+    </owl:NamedIndividual>
+
+    <!-- Test instance: Maize with irrigation need due to low rainfall -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#Test_Maize_IrrigationNeed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/situation#AgriculturalSituation"/>
+        <situation:hasCrop rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/crop#Maize_Variety_Standard"/>
+        <situation:hasClimate rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_LowRainfall"/>
+        <rdfs:label>Test_Maize_IrrigationNeed</rdfs:label>
+        <rdfs:comment>Instance de test pour détecter le besoin d'irrigation du maïs sur base du taux de pluie réel (précipitation &lt; 300 mm).</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Test climate: low rainfall with explicit precipitation measure -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation_Low_250mm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation"/>
+        <climate:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.0</climate:hasValue>
+        <climate:hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</climate:hasUnit>
+        <rdfs:label>Precipitation_Low_250mm</rdfs:label>
+        <rdfs:comment>Mesure de précipitation représentant un manque de pluie significatif pour la culture.</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- Updated climate individual: link rainfall measure to the low rainfall climate -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Climate_LowRainfall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#LowRainfall"/>
+        <climate:hasPrecipitation rdf:resource="http://www.semanticweb.org/megnastephane/ontologies/2026/3/climate#Precipitation_Low_250mm"/>
+        <rdfs:label>Climate_LowRainfall</rdfs:label>
+        <rdfs:comment>Climat caractérisé par faible précipitation, nécessitant une irrigation supplémentaire.</rdfs:comment>
+    </owl:NamedIndividual>
+
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 </rdf:RDF>
 
